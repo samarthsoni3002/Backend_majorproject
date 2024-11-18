@@ -7,7 +7,7 @@ from openpyxl.chart import BarChart, Reference
 from openpyxl.chart.label import DataLabelList
 
 def fetch_icu_data():
-    cred = credentials.Certificate('Backend_majorproject/hand_wash_json_file.json')
+    cred = credentials.Certificate('/')
     firebase_admin.initialize_app(cred, {
         'databaseURL': 'https://handhygiene-jaypeehealthcare-default-rtdb.firebaseio.com/'
     })
