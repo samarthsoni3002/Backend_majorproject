@@ -1,5 +1,3 @@
-import firebase_admin
-from firebase_admin import credentials, db
 from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
@@ -7,10 +5,6 @@ from openpyxl.chart import BarChart, Reference
 from openpyxl.chart.label import DataLabelList
 
 def fetch_icu_data():
-    cred = credentials.Certificate('/')
-    firebase_admin.initialize_app(cred, {
-        'databaseURL': 'https://handhygiene-jaypeehealthcare-default-rtdb.firebaseio.com/'
-    })
 
     # Configuration
     target_icus = ["ACTVs", "MICU", "NICU", "PICU", "TICU"]
